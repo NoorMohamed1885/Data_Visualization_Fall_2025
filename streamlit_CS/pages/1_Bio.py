@@ -14,7 +14,7 @@ FUN_FACTS = [
     "I’m learning data visualization.",
     "I want to build a website.",
 ]
-PHOTO_PATH = "photo.jpg"  # Put a file in repo root or set a URL
+PHOTO_PATH = "streamlit_CS/assets/photo.jpg"  # Put a file in repo root or set a URL
 
 # ---------- Layout ----------
 col1, col2 = st.columns([1, 2], vertical_alignment="center")
