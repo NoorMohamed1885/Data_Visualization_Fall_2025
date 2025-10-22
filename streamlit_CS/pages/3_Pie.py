@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 
 # Title
-st.title("Pie Chart Viewer")
+st.title("Hobby Rating Viewer")
 
 # Load CSV data
 csv_file_path = 'streamlit_CS/data/pie_demo.csv'
