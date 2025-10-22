@@ -60,4 +60,4 @@ st.plotly_chart(fig, use_container_width=True)
 if auto_refresh:
     time.sleep(refresh_sec)
     get_weather.clear()
-    # st.rerun()
+    st.rerun()
