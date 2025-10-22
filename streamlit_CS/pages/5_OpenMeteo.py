@@ -16,7 +16,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.title("📡 Live Denver Weather (Open Meteo")
+st.title("📡 Live Denver Weather (Open Meteo)")
 
 # CONFIG:
 def build_url(lat, lon):
@@ -53,8 +53,8 @@ df = get_weather()
 
 st.dataframe(df, use_container_width=True)
 
-# fig = px.bar(df, x="coin", y=VS, title=f"Current price ({VS.upper()})")
-# st.plotly_chart(fig, use_container_width=True)
+fig = px.line(df, x="Time", y="Temperature", title='Temperature Over Time')
+st.plotly_chart(fig, use_container_width=True)
 
 # If auto-refresh is ON, wait and rerun the app
 if auto_refresh:
