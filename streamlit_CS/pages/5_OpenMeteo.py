@@ -48,13 +48,13 @@ auto_refresh = st.toggle("Enable auto-refresh", value=False)
 st.caption(f"Last refreshed at: {time.strftime('%H:%M:%S')}")
 
 # MAIN VIEW:
-st.subheader("Prices")
+st.subheader("Temperature Over Time")
 df = get_weather()
 
 st.dataframe(df, use_container_width=True)
 
-fig = px.bar(df, x="coin", y=VS, title=f"Current price ({VS.upper()})")
-st.plotly_chart(fig, use_container_width=True)
+# fig = px.bar(df, x="coin", y=VS, title=f"Current price ({VS.upper()})")
+# st.plotly_chart(fig, use_container_width=True)
 
 # If auto-refresh is ON, wait and rerun the app
 if auto_refresh:
