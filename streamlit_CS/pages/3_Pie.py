@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+import plotly.express as px
 
 # Title
 st.title("Pie Chart Viewer")
@@ -22,13 +22,11 @@ try:
 
     # Validate column data types
     if pd.api.types.is_numeric_dtype(df[value_col]):
-        # Create Pie Chart
-        fig, ax = plt.subplots()
-        ax.pie(df[value_col], labels=df[label_col], autopct='%1.1f%%', startangle=90)
-        ax.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+        # Create Pie Chart using Plotly
+        fig = px.pie(df, names=label_col, values=value_col, title="Pie Chart")
 
         st.subheader("Pie Chart")
-        st.pyplot(fig)
+        st.plotly_chart(fig)
     else:
         st.error("The selected value column must be numeric.")
 
