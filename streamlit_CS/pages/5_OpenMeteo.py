@@ -53,7 +53,7 @@ df = get_weather()
 
 st.dataframe(df, use_container_width=True)
 
-fig = px.line(df, x="Time", y="Temperature", title='Temperature Over Time')
+fig = px.line(df, x="time", y="temperature", title='Temperature Over Time')
 st.plotly_chart(fig, use_container_width=True)
 
 # If auto-refresh is ON, wait and rerun the app
