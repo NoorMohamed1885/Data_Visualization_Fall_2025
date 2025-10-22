@@ -6,7 +6,7 @@ import plotly.express as px
 st.title("Pie Chart Viewer")
 
 # Load CSV data
-csv_file_path = 'data/pie_demo.csv'
+csv_file_path = 'streamlit_CS/data/pie_demo.csv'
 
 try:
     df = pd.read_csv(csv_file_path)
